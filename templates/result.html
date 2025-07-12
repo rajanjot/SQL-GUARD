@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SQL Injection Detection Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Analysis Results</h1>
+    <p>1A:Source IP address:-{{ results.attacker_ip }}-;</p>
+    <p>2A:Count of SQL Injection Attempts:-{{ results.attempt_count }}-;</p>
+    <p>3A:Initial SQL Injection Attempt:-{{ results.first_payload }}-;</p>
+    <p>4A:Final SQL Injection Attempt:-{{ results.last_payload }}-;</p>
+    <p>5A:Payloads Using Formatting Symbols:-{{ results.formatted_symbol_count }}-;</p>
+    <br>
+    <a href="{{ url_for('upload_file') }}">Analyze another file</a>
+</body>
+</html>
